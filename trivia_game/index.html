@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Trivia App</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--Player Info + Start Page-->
+    <div class="gameContainer">
+      <div id="start">
+        <h1 id="title">Trivia Game</h1>
+        <h3 id="subtitle">Choose a category:</h3>
+        <button
+          id="sportsQ"
+          class="cat-button theme"
+          onclick="setQuestions('1');"
+        >
+          Sports
+        </button>
+        <button
+          id="videogamesQ"
+          class="cat-button theme"
+          onclick="setQuestions('2');"
+        >
+          Video Games
+        </button>
+        <button
+          id="generalQ"
+          class="cat-button theme"
+          onclick="setQuestions('3');"
+        >
+          General Knowledge
+        </button>
+        <button
+          id="startBtn"
+          class="start-button disabled theme"
+          onclick="startGame();"
+        >
+          Start Game!
+        </button>
+      </div>
+      <!--Questions and Answer Page-->
+      <div id="trivia">
+        <div id="question"><p>Question</p></div>
+        <div id="timer">
+          <div id="timeGaugeLeft"></div>
+          <div id="timeGauge"></div>
+          <div id="counter"></div>
+        </div>
+        <div id="choices">
+          <div
+            id="A"
+            class="choice unselectable"
+            unselectable="on"
+            onclick="isAnswerCorrect('A')"
+          >
+            A
+          </div>
+          <div
+            id="B"
+            class="choice unselectable"
+            unselectable="on"
+            onclick="isAnswerCorrect('B')"
+          >
+            B
+          </div>
+          <div
+            id="C"
+            class="choice unselectable"
+            unselectable="on"
+            onclick="isAnswerCorrect('C')"
+          >
+            C
+          </div>
+          <div
+            id="D"
+            class="choice unselectable"
+            unselectable="on"
+            onclick="isAnswerCorrect('D')"
+          >
+            D
+          </div>
+        </div>
+      </div>
+      <!--Score Display Page-->
+      <div id="finish" style="display:none;">
+        <span id="scoreContainer"></span>
+        <button class="startagain-button" onclick="startAgain()">
+          Start again
+        </button>
+      </div>
+
+      <div id="progress" class="prog" style="display:none">
+        <span class="square" id="q0"></span>
+        <span class="square" id="q1"></span>
+        <span class="square" id="q2"></span>
+        <span class="square" id="q3"></span>
+        <span class="square" id="q4"></span>
+        <span class="square" id="q5"></span>
+        <span class="square" id="q6"></span>
+        <span class="square" id="q7"></span>
+        <span class="square" id="q8"></span>
+        <span class="square" id="q9"></span>
+        <span class="square" id="q10"></span>
+        <span class="square" id="q11"></span>
+        <span class="square" id="q12"></span>
+        <span class="square" id="q13"></span>
+        <span class="square" id="q14"></span>
+        <span class="square" id="q15"></span>
+        <span class="square" id="q16"></span>
+        <span class="square" id="q17"></span>
+        <span class="square" id="q18"></span>
+        <span class="square" id="q19"></span>
+      </div>
+    </div>
+
+    <!--JavaScript-->
+    <script src="script.js" async defer></script>
+  </body>
+</html>
